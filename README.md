@@ -7,6 +7,6 @@ helm install gateway ./api-gateway-chart
 ![Схема взаимодействия](schema.png)
 
 
-Для тестирования использовать коллекцию Postman:  [коллеция postman](postman_collection.json).
+Для тестирования использовать коллекцию Postman:  [коллеция postman](gateway-collection.json).
 При запуске через newman выводятся headers и bodies для request и response.
 Команды вызова: newman run <Collection_name>
