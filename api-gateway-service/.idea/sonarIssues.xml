@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-applications-aggregation/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-applications-bpm/CHANGELOG.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-applications-bpm/backend/src/main/resources/application-local.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-applications-bpm/backend/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-applications/CHANGELOG.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-applications/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-auth/src/main/kotlin/ru/vtb/msa/creditcards/ccauth/data/repository/CachedTempRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications-aggregation/values-dso-credcards.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications-aggregation/values-hf-ccpp.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications-aggregation/values-ift-ccpp.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications-aggregation/values-k3-credcards.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications-aggregation/values-k4-credcards.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications-aggregation/values-k5-credcards.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications-aggregation/values-rr-ccpp.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications-bpm/values-hf-ccpp.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications-bpm/values-rr-ccpp.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications/values-hf-ccpp.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications/values-ift-ccpp.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications/values-k3-credcards.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications/values-k4-credcards.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/cc-os-manifests/cc-applications/values-rr-ccpp.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../api-gateway-chart/templates/config.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../api-gateway-chart/templates/deployment.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../api-gateway-chart/templates/service.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../api-gateway-chart/values.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/apigateway/ApiGatewayApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/apigateway/AuthHeaderFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/apigateway/CcApiGatewayApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/apigateway/ErrorHeaderFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/apigateway/RoutesHeaderFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/application.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/apigateway/ApiGatewayApplicationTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/target/classes/application.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/.idea/.name">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/authapp.iml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/AuthApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/config/SecurityConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/constants/JwtHeaders.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/controller/AuthApi.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/controller/AuthController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/controller/AuthV3Api.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/controller/AuthV3Controller.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dot/AuthErrorResponse.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dot/AuthResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dot/AuthTokenResponse.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dot/ErrorType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dot/request/SignCredential.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dot/response/JwtResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dto/AuthErrorResponse.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dto/AuthResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dto/AuthTokenResponse.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dto/ErrorType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dto/request/SignCredential.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dto/request/SignRequest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dto/response/AuthResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dto/response/JwtResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dto/response/RegistrationResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dto/response/SignResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/dto/response/SignResultV3.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/security/filter/AbstractJwtFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/security/filter/JwtApiFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/security/filter/JwtAuthenticationFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/security/service/JwtTokenProviderService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/service/AccessControlService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/service/AccessControlServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/service/AuthService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/service/AuthServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/service/authentication/TempUserDataStorageService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/service/authentication/TempUserDataStorageServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/vtbid/AuthErrorResponse.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/vtbid/AuthResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/vtbid/ErrorType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/vtbid/IdErrorType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/vtbid/VtbIdAuthResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/vtbid/VtbIdErrorType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/vtbid/request/SignCredential.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/vtbid/request/SignCredentialV3.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/vtbid/response/JwtResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/java/com/auth/vtbid/response/JwtVtbIdResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../auth-service/src/main/resources/application.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../eurika-service/Dockerfile">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../eurika-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../eurika-service/src/main/java/com/apigateway/ApiGatewayApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../eurika-service/src/main/java/com/apigateway/EurekaServerApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../eurika-service/src/main/resources/application.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../person-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../person-service/src/main/java/com/person/PersonApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../person-service/src/main/java/com/person/client/AuthClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../person-service/src/main/java/com/person/client/AuthClientImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../person-service/src/main/java/com/person/constants/JwtHeaders.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../person-service/src/main/java/com/person/controller/UserController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../person-service/src/main/java/com/person/controller/dto/UserRequest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../person-service/src/main/java/com/person/controller/dto/VerifyResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../person-service/src/main/java/com/person/models/User.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../person-service/src/main/java/com/person/utils/ClientResponseUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../person-service/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../spring-cloud-eureka-hystrix-zuul-example-master/hello-client/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

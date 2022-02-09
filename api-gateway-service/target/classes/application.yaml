@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: api-gateway-service
+    cloud:
+      loadbalancer:
+        ribbon:
+          enabled: false
+server:
+  port: 8080
+  ribbon:
+    ServerListRefreshInterval: 15000
+debug: true
+trace: true
+logging:
+  level:
+    org:
+      springframework:
+        web: debug
+        cloud:
+          netflix: trace
+
+# routes
+zuul:
+  ignored-services: '*'
+  includeDebugHeader: true
+  ribbon:
+    eager-load:
+      enabled: false
+  routes:
+    auth-service:
+      path: /auth/**
+      serviceId: auth-service
+      strip-prefix: false
+    person-service:
+      path: /person/**
+      serviceId: person-service
+      strip-prefix: false
+
+auth-service:
+    listOfServers: ${AUTH_SERVICE_URL}
+    ServerListRefreshInterval: 10000
+person-service:
+    listOfServers: ${PERSON_SERVICE_URL}
+    ServerListRefreshInterval: 10000

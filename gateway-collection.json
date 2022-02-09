@@ -1,0 +1,522 @@
+{
+	"info": {
+		"_postman_id": "b31e79d4-b890-4934-a6de-05cc219a5b2c",
+		"name": "User API Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register first person",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let responceJSON = pm.response.json()",
+							"pm.collectionVariables.set(\"userId\", responceJSON[\"id\"])",
+							"pm.collectionVariables.set(\"previousUserId\", responceJSON[\"id\"])",
+							"pm.collectionVariables.set(\"userLogin\", responceJSON[\"login\"])",
+							"pm.test(\"success register first person test\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"let requestR = pm.request;",
+							"console.log(\"Request\")",
+							"console.log(requestR.headers);",
+							"console.log(requestR.body);",
+							"console.log(\"################################\");",
+							"console.log(\"Response\")",
+							"console.log(pm.response.headers);",
+							"console.log(responceJSON);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"{{$randomFirstName}}\",\n    \"login\" : \"{{$randomBankAccountBic}}\",\n    \"firstName\": \"{{$randomFirstName}}\",\n    \"lastName\": \"{{$randomLastName}}\",\n    \"email\":\"{{$randomEmail}}\",\n    \"phone\":\"{{$randomPhoneNumber}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{url}}/person/register",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"person",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unauthorizated get information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Unauthorization get test\", function() {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							"let requestR = pm.request;\r",
+							"console.log(\"Request\")\r",
+							"console.log(requestR.headers);\r",
+							"console.log(requestR.body);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{url}}/person/user/{{userId}}",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"person",
+						"user",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unauthorizated update information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Unauthorization put test\", function() {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							"\r",
+							"let requestR = pm.request;\r",
+							"console.log(\"Request\")\r",
+							"console.log(requestR.headers);\r",
+							"console.log(requestR.body);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"updated first person\",\n    \"firstName\": \"updated first name\",\n    \"lastName\": \"updated last name\",\n    \"email\":\"m2@mail.ru\",\n    \"phone\":\" 4444\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{url}}/person/user/{{userId}}",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"person",
+						"user",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorization first person",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let header = pm.response.headers.get(\"X-User-Session-ID\")\r",
+							"pm.collectionVariables.set(\"X-User-Session-ID-var\", header)\r",
+							"\r",
+							"pm.test(\"Success authorization test\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let requestR = pm.request;\r",
+							"console.log(\"Request\")\r",
+							"console.log(requestR.headers);\r",
+							"console.log(requestR.body);\r",
+							"console.log(\"################################\");\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://{{url}}/auth/authorization?login={{userLogin}}",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"authorization"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "{{userLogin}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get information first person",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"success get information test\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// let responceJSON = pm.response.json()\r",
+							"let requestR = pm.request;\r",
+							"console.log(\"Request\")\r",
+							"console.log(requestR.headers);\r",
+							"console.log(requestR.body);\r",
+							"// console.log(\"################################\");\r",
+							"// console.log(\"Response\")\r",
+							"// console.log(pm.response.headers);\r",
+							"// console.log(responceJSON);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-User-Session-ID",
+						"value": "{{X-User-Session-ID-var}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{url}}/person/user/{{userId}}",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"person",
+						"user",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update information first person",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"success update information test\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let responceJSON = pm.response.json()\r",
+							"let requestR = pm.request;\r",
+							"console.log(\"Request\")\r",
+							"console.log(requestR.headers);\r",
+							"console.log(requestR.body);\r",
+							"console.log(\"################################\");\r",
+							"console.log(\"Response\")\r",
+							"console.log(pm.response.headers);\r",
+							"console.log(responceJSON);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-User-Session-ID",
+						"value": "{{X-User-Session-ID-var}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"updated first person\",\n    \"firstName\": \"updated first name\",\n    \"lastName\": \"updated last name\",\n    \"email\":\"m2@mail.ru\",\n    \"phone\":\" 4444\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{url}}/person/user/{{userId}}",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"person",
+						"user",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register second person",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let responceJSON = pm.response.json()",
+							"pm.collectionVariables.set(\"userId\", responceJSON[\"id\"])",
+							"pm.collectionVariables.set(\"userLogin\", responceJSON[\"login\"])",
+							"",
+							"pm.test(\"success register first person test\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"let requestR = pm.request;",
+							"console.log(\"Request\")",
+							"console.log(requestR.headers);",
+							"console.log(requestR.body);",
+							"console.log(\"################################\");",
+							"console.log(\"Response\")",
+							"console.log(pm.response.headers);",
+							"console.log(responceJSON);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"{{$randomFirstName}}\",\n    \"login\" : \"{{$randomBankAccountBic}}\",\n    \"firstName\": \"{{$randomFirstName}}\",\n    \"lastName\": \"{{$randomLastName}}\",\n    \"email\":\"{{$randomEmail}}\",\n    \"phone\":\"{{$randomPhoneNumber}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{url}}/person/register",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"person",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorization second person",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let header = pm.response.headers.get(\"X-User-Session-ID\")\r",
+							"pm.collectionVariables.set(\"X-User-Session-ID-var\", header)\r",
+							"\r",
+							"pm.test(\"Success authorization test\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"let requestR = pm.request;\r",
+							"console.log(\"Request\")\r",
+							"console.log(requestR.headers);\r",
+							"console.log(requestR.body);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{url}}/auth/authorization?login={{userLogin}}",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"authorization"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "{{userLogin}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "failed updating information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Unauthorization put test\", function() {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							"\r",
+							"let requestR = pm.request;\r",
+							"console.log(\"Request\")\r",
+							"console.log(requestR.headers);\r",
+							"console.log(requestR.body);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-User-Session-ID",
+						"value": "{{X-User-Session-ID-var}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"updated first person\",\n    \"firstName\": \"updated first name\",\n    \"lastName\": \"updated last name\",\n    \"email\":\"m2@mail.ru\",\n    \"phone\":\" 4444\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{url}}/person/user/{{previousUserId}}",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"person",
+						"user",
+						"{{previousUserId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "userId",
+			"value": null
+		},
+		{
+			"key": "url",
+			"value": "arch.homework",
+			"type": "default"
+		},
+		{
+			"key": "previousUserId",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "X-User-Session-ID-var",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "userLogin",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

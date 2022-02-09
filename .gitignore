@@ -1,0 +1,7 @@
+/api-gateway-service/target/
+/auth-service/target/
+/person-service/target/
+/person-service/.idea/
+/auth-service/.idea/
+/api-gateway-chart/.idea/
+/.idea/

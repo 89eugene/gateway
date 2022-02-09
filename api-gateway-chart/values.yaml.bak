@@ -1,0 +1,39 @@
+# Default values for first-chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+namespace: gateway
+
+
+
+images:
+    authservice:
+        repository: eugene89/auth-service
+        replicaCount: 1
+    personservice:
+        repository: eugene89/person-service
+        replicaCount: 2
+    api-gateway:
+        repository: eugene89/api-gateway-service
+        replicaCount: 1
+
+ingress:
+  hostname: arch.homework
+
+service:    
+  type: NodePort
+  authservice:
+    port: 8070
+  personservice:
+    port: 8060
+  apigateway:
+    port: 8080
+
+externalPostgresql:
+  postgresqlUserName: myuser
+  postgresqlPassword: passwd
+  postgresqlDatabase: myapp
+  postgresqlHost: "postgres"
+  postgresqlPort: "5432"
+
+postgres:
+  image: postgres:11

@@ -1,0 +1,82 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apigatewayservice
+  labels:
+    app: apigatewayservice
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.images.apigateway.replicaCount }}
+  selector:
+    matchLabels:
+      app: apigatewayservice
+  template:
+    metadata:
+      labels:
+        app: apigatewayservice
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.images.apigateway.repository }}"
+          ports:
+            - name: http
+              containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: apigatewayconfig
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: person-service
+  labels:
+    app: person-service
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.images.personservice.replicaCount }}
+  selector:
+    matchLabels:
+      app: person-service
+  template:
+    metadata:
+      labels:
+        app: person-service
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/config.yaml") . | sha256sum }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.images.personservice.repository }}"
+          ports:
+            - name: http
+              containerPort: 8080
+          envFrom:
+            - configMapRef:
+                 name: personserviceconfig
+            - secretRef:
+                 name: personservicesecret
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-service
+  labels:
+    app: auth-service
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.images.authservice.replicaCount }}
+  selector:
+    matchLabels:
+      app: auth-service
+  template:
+    metadata:
+      labels:
+        app: auth-service
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.images.authservice.repository }}"
+          ports:
+             - containerPort: 8080
+               name: http
